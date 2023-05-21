@@ -8,18 +8,20 @@ Crear una aplicación de gestión de tareas. Estará principalmente enfocada hac
 
 Estos serán los componentes con los que contará la aplicación:
 
-- Una base de datos que almacenará los usuarios con sus permisos, usuario y contraseñas.
+- Una base de datos que almacenará tanto usuarios con sus datos como los proyectos y las tareas. 
 - Ver la lista de proyectos (en los que estás) y dentro de estos todas las tareas a realizar.
 - Las tareas tendrán un título, descripción, un nivel de prioridad y las personas que estén inscritas a esta.
 - Recibir un correo ya sea por email o una notificación por la propia aplicación del cambio del estado de tu tarea.
+
+![image](https://github.com/Xperza/integracion-dam/assets/90802641/fd565d15-5d8c-4998-b7e4-ece9d4027073)
 
 ## DISEÑO DEL SOFTWARE
 
 El diseño del software será el siguiente implementando el uso de las aplicaciones y frameworks de la empresa utilizaré:
 
-- Back-end Java Spring, toda la gestión de la aplicación.
-- Front-end para la interfaz principal de la aplicación utilizaré Angular.
-- Gestión de las bases de datos con SQL, intentando utilizar Docker.
+- Back-end Java con el framework Spring, donode se llevará a cabo la conexión con JPA a SQL para pedir las consultas necesarias a traves de endpoints.
+- Front-end para la interfaz principal de la aplicación donde utilizaré Angular que utiliza HTML, CSS y TypeScript, esta se conectará con el back mediante los endpoints para pedir las consultas.
+- Gestión de las bases de datos con SQL.
 - El envío de mensajes de correo se hará con Spring.
 
 ## ESTIMACIÓN DE COSTES
