@@ -56,6 +56,7 @@ public class TareaMapper {
 		dto.setDescripcion(tarea.getDescripcion());
 		dto.setProyecto(proyectoMapper.toProyectoDTO(tarea.getProyecto()));
 		dto.setUsuario(getEmailUsuarios(tarea));
+		dto.setEstado(tarea.isEstado());
 		
 		return dto;
 	}
@@ -70,6 +71,7 @@ public class TareaMapper {
 		tarea.setFechaFin(dto.getFechaFin());
 		tarea.setImportancia(dto.getImportancia());
 		tarea.setProyecto(proyectoMapper.toEntity(dto.getProyecto()));
+		tarea.setEstado(dto.isEstado());
 		
 		if (dto.getUsuario()!=null) {
 			List<Usuario> usuarios = new ArrayList<>();

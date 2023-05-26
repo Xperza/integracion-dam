@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,6 +41,8 @@ public class Tarea implements Serializable{
 	
 	private String importancia;
 	
+	private boolean estado;
+	
 	@Temporal(TemporalType.DATE)
 	private Date fecha;
 	
@@ -51,7 +54,7 @@ public class Tarea implements Serializable{
 	@JsonBackReference
 	private Proyecto proyecto;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(
 			name = "tarea_usuario",
 			joinColumns = @JoinColumn(name = "id_tarea"),
@@ -62,7 +65,7 @@ public class Tarea implements Serializable{
 	}
 
 	public Tarea(int id, String nombre, String descripcion, String importancia, Date fecha, Date fechaFin,
-			Proyecto proyecto, List<Usuario> usuarios) {
+			Proyecto proyecto, List<Usuario> usuarios, boolean estado) {
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -71,6 +74,7 @@ public class Tarea implements Serializable{
 		this.fechaFin = fechaFin;
 		this.proyecto = proyecto;
 		this.usuarios = usuarios;
+		this.estado = estado;
 	}
 
 	public int getId() {
@@ -79,6 +83,14 @@ public class Tarea implements Serializable{
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 
 	public String getNombre() {

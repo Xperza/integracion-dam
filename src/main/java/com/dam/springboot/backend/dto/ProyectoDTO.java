@@ -14,16 +14,16 @@ public class ProyectoDTO {
 	public ProyectoDTO() {
 	}
 
-	public int getId() {
-		return id;
-	}
-
 	public ProyectoDTO(int id, String nombre, Date fecha, String descripcion, List<String> usuarios) {
 		this.id = id;
 		this.nombre = nombre;
 		this.fecha = fecha;
 		this.descripcion = descripcion;
 		this.usuarios = usuarios;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	public void setId(int id) {

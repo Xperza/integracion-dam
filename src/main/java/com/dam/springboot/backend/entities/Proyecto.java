@@ -42,7 +42,7 @@ public class Proyecto implements Serializable {
 	
 	private String descripcion;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(
 			name="proyecto_usuario",
 			joinColumns = @JoinColumn(name = "id_proyecto"),

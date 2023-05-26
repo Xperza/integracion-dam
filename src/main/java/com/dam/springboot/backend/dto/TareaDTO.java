@@ -13,12 +13,13 @@ public class TareaDTO {
 	private Date fechaFin;
 	private ProyectoDTO proyecto;
 	private List<String> usuario;
+	private boolean estado;
 	
 	public TareaDTO() {
 	}
 
 	public TareaDTO(int id, String nombre, String importancia, Date fecha, Date fechaFin, ProyectoDTO proyecto,
-			List<String> usuario, String descripcion) {
+			List<String> usuario, String descripcion, boolean estado) {
 		this.id = id;
 		this.nombre = nombre;
 		this.importancia = importancia;
@@ -27,6 +28,7 @@ public class TareaDTO {
 		this.proyecto = proyecto;
 		this.usuario = usuario;
 		this.descripcion = descripcion;
+		this.estado=estado;
 	}
 
 	public int getId() {
@@ -75,6 +77,14 @@ public class TareaDTO {
 
 	public void setProyecto(ProyectoDTO proyecto) {
 		this.proyecto = proyecto;
+	}
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 
 	public List<String> getUsuario() {

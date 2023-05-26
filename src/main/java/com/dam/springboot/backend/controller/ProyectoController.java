@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dam.springboot.backend.dto.ProyectoDTO;
 import com.dam.springboot.backend.dto.TareaDTO;
 import com.dam.springboot.backend.entities.Proyecto;
+import com.dam.springboot.backend.entities.Usuario;
 import com.dam.springboot.backend.mapper.ProyectoMapper;
 import com.dam.springboot.backend.mapper.TareaMapper;
 import com.dam.springboot.backend.service.ProyectoService;
