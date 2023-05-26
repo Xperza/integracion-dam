@@ -1,8 +1,5 @@
 # Instalación/Despliegue
 
-Puesta en producción del software. En caso de una aplicación de usuario final, deberá contar con un instalador o paquete de instalación (exe, msi, deb, deb, rpm, apk).
+Los requisitos principales para el despliegue de la aplicación serán, Tener Spring instalado con el servidor Tomcat, servicio de MySQL, por ejemplo XAMPP y para el front necesitarás Angular (tanto node.js como npm). Tras tener estos servicios instalados podremos ponernos con el despliegue de la aplicación.
 
-Opcionalmente, se propone hacer uso de herramientas de tipo CI/CD (integración continua/despliegue continuo) que faciliten la distribución/despliegue. 
-
-
-> NOTA: La CI/CD es un método para distribuir las aplicaciones a los clientes con frecuencia mediante el uso de la automatización en las etapas del distribución y la implementación continuas.
+Para el despliegue, antes de nada, crearemos la base de datos (en este caso team_organizer) para que el back pueda crear las entidades en esta, tras esto, abriremos nuestro IDE con la apliación del back y lo lanzaremos (con el application.properties configurado para tus conexiones). Luego, levantaremos el front poniendo en la consola ng serve -o , esto levantará nuestra aplicación en el localhost, también podemos hacer ng serve --host=0.0.0.0 , este para lanzar la aplicación en la red local, lo que hará que cualquier persona conectada a la red podrá también utilizarla (para esto puede que haya que hacer algunos cambios en la conexión de los endpoints). Con todo esto hecho la aplicación estará funcionando y lista para utilizar.
